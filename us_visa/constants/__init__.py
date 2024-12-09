@@ -5,7 +5,10 @@ DATABASE_NAME = "US_VISA"
 
 COLLECTION_NAME = "visa_data"
 
-MONGODB_URL_KEY = "mongodb+srv://adisarkar2004:ddZJTqwF8ksMQMmg@cluster0.wcpuk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+MONGODB_URL_KEY = os.getenv("MONGODB_URL")
+import os
+
+MONGODB_URL_KEY = os.getenv("MONGODB_URL")
 
 PIPELINE_NAME: str = "usvisa"
 ARTIFACT_DIR: str = "artifact"
@@ -80,3 +83,6 @@ MODEL_PUSHER_S3_KEY = "model-registry"
 
 APP_HOST = "0.0.0.0"
 APP_PORT = 8080
+
+
+
